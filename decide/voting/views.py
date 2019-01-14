@@ -10,6 +10,9 @@ from .serializers import VotingSerializer
 from base.perms import UserIsStaff
 from base.models import Auth
 
+class Comida(generics.ListCreateAPIView):
+    def pru(self, request):
+        return Response('Hola',status=status.HTTP_200_OK)
 
 class VotingView(generics.ListCreateAPIView):
     queryset = Voting.objects.all()
