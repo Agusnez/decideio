@@ -11,7 +11,7 @@ from base.perms import UserIsStaff
 from base.models import Auth
 
 class Comida(generics.ListCreateAPIView):
-    def pru(self, request):
+    def get(self, request):
         return Response('Hola',status=status.HTTP_200_OK)
 
 class VotingView(generics.ListCreateAPIView):
